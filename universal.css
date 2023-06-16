@@ -1,0 +1,374 @@
+* {
+    cursor: none;
+}
+
+.cursor {
+    z-index: 100;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #FFF;
+    pointer-events: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    backdrop-filter: blur(.3rem);
+
+    transition: width 500ms, height 500ms, background 500ms/*, transform 20ms*/;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+  backdrop-filter: blur(.2rem);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    /* box-shadow: inset 0 0 10px black;  */
+    border-radius: 10px 4px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2); 
+    border-radius: 10px 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 0 0.4rem black;
+    border-radius: 0px;
+}
+
+
+#bottom, #top {
+    height: 10vh; 
+    position: relative; 
+    z-index: 2;
+    background: #000;
+    width: 100vw;
+    margin: 1rem 0px;
+}
+
+#bottom {
+    background: linear-gradient(180deg, rgba(17, 25, 31, 0) 0%,
+rgba(17, 25, 31, 0.0025) 5%,
+rgba(17, 25, 31, 0.01) 10%,
+rgba(17, 25, 31, 0.0225) 15%,
+rgba(17, 25, 31, 0.04) 20%,
+rgba(17, 25, 31, 0.0625) 25%,
+rgba(17, 25, 31, 0.09) 30%,
+rgba(17, 25, 31, 0.1225) 35%,
+rgba(17, 25, 31, 0.16) 40%,
+rgba(17, 25, 31, 0.2025) 45%,
+rgba(17, 25, 31, 0.25) 50%,
+rgba(17, 25, 31, 0.3025) 55%,
+rgba(17, 25, 31, 0.36) 60%,
+rgba(17, 25, 31, 0.4225) 65%,
+rgba(17, 25, 31, 0.49) 70%,
+rgba(17, 25, 31, 0.5625) 75%,
+rgba(17, 25, 31, 0.64) 80%,
+rgba(17, 25, 31, 0.7225) 85%,
+rgba(17, 25, 31, 0.81) 90%,
+rgba(17, 25, 31, 0.9025) 95%,
+rgba(17, 25, 31, 1) 100%);
+    margin-top: -10vh;
+}
+
+#top {
+    background: linear-gradient(0deg, rgba(17, 25, 31, 0) 0%,
+rgba(17, 25, 31, 0.0025) 5%,
+rgba(17, 25, 31, 0.01) 10%,
+rgba(17, 25, 31, 0.0225) 15%,
+rgba(17, 25, 31, 0.04) 20%,
+rgba(17, 25, 31, 0.0625) 25%,
+rgba(17, 25, 31, 0.09) 30%,
+rgba(17, 25, 31, 0.1225) 35%,
+rgba(17, 25, 31, 0.16) 40%,
+rgba(17, 25, 31, 0.2025) 45%,
+rgba(17, 25, 31, 0.25) 50%,
+rgba(17, 25, 31, 0.3025) 55%,
+rgba(17, 25, 31, 0.36) 60%,
+rgba(17, 25, 31, 0.4225) 65%,
+rgba(17, 25, 31, 0.49) 70%,
+rgba(17, 25, 31, 0.5625) 75%,
+rgba(17, 25, 31, 0.64) 80%,
+rgba(17, 25, 31, 0.7225) 85%,
+rgba(17, 25, 31, 0.81) 90%,
+rgba(17, 25, 31, 0.9025) 95%,
+rgba(17, 25, 31, 1) 100%);
+    margin-bottom: -10vh;
+}
+
+a {
+    text-align: center;
+}
+
+#img1 {
+    background: linear-gradient( 90deg, rgba(0, 0, 0, 0.2) 0%, 
+        rgba(0, 0, 0, 0.8) 100% ), 
+        url("/assets/images/car.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+#img2 {
+    background: linear-gradient( 90deg, rgba(0, 0, 0, 0.8) 0%, 
+        rgba(0, 0, 0, 0.2) 100% ), 
+        url("/assets/images/credits.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+#img3 {
+    background: linear-gradient( 90deg, rgba(0, 0, 0, 0.2) 0%, 
+        rgba(0, 0, 0, 0.8) 100% ), 
+        url("/assets/images/mirrors.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+#img4 {
+    background: linear-gradient( 90deg, rgba(0, 0, 0, 0.8) 0%, 
+        rgba(0, 0, 0, 0.2) 100% ), 
+        url("/assets/images/plexus.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.imageBlock {
+    padding: 2rem;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    transition: border-radius 500ms, box-shadow 2s, width 1s;
+    width: 100%;
+    margin: auto;
+}
+
+.imageBlock:hover {
+    border-radius: 15vh 3vh;
+    box-shadow: 0px 0px 3rem 3rem rgba(0, 0, 0, 0.2);
+    width: 80%;
+    transition: border-radius 500ms, box-shadow 2s, width 2s;
+}
+
+.imageBlock * {
+    margin: .2rem;
+}
+
+
+.artBlock {
+    padding: 1rem;
+    min-height: 30vh;
+    width: 100%;
+    max-width: 80vw;
+    margin: auto;
+    background-size: cover;
+    transition: border-radius 500ms, box-shadow 2s, width 1s;
+}
+
+.artBlock:hover {
+    border-radius: 15vh 3vh;
+    box-shadow: 0px 0px 3rem 3rem rgba(0, 0, 0, 0.2);
+    width: 130%;
+    transition: border-radius 500ms, box-shadow 2s, width 2s, background-size 2s;
+}
+
+.contactContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contactBlock {
+    width: 8rem;
+    height: 8rem;
+    margin: 3rem;
+    text-decoration: none;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    transition: transform 400ms, filter 400ms;
+}
+
+.contactBlock * {
+    margin: .3rem;
+}
+
+.contactBlock:hover {
+    filter: brightness(0%) drop-shadow(0 0 1rem #48B);
+    transform: scale(110%);
+    transition: transform 400ms, filter 400ms;
+}
+
+.footerContainer {
+    height: 30vh; 
+    background: linear-gradient(to left, rgba(17, 25, 31, 0) 0%, 
+rgba(17, 25, 31, 0.0025) 4%,
+rgba(17, 25, 31, 0.01) 6%,
+rgba(17, 25, 31, 0.0225) 8%,
+rgba(17, 25, 31, 0.04) 10%,
+rgba(17, 25, 31, 0.0625) 12%,
+rgba(17, 25, 31, 0.09) 14%,
+rgba(17, 25, 31, 0.1225) 16%,
+rgba(17, 25, 31, 0.16) 18%,
+rgba(17, 25, 31, 0.2025) 20%,
+rgba(17, 25, 31, 0.25) 22%,
+rgba(17, 25, 31, 0.3025) 24%,
+rgba(17, 25, 31, 0.36) 26%,
+rgba(17, 25, 31, 0.4225) 28%,
+rgba(17, 25, 31, 0.49) 30%,
+rgba(17, 25, 31, 0.5625) 32%,
+rgba(17, 25, 31, 0.64) 34%,
+rgba(17, 25, 31, 0.7225) 36%,
+rgba(17, 25, 31, 0.81) 38%,
+rgba(17, 25, 31, 0.9025) 40%,
+rgba(17, 25, 31, 0.93) 42%,
+rgba(17, 25, 31, 1) 100%),
+ url(/assets/images/blackbg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.footer {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.footer * {
+    margin: .1rem;
+    text-decoration: none;
+}
+
+.footer *:hover {
+    filter: brightness(101%);
+}
+
+.glsl-canvas {
+    height: 30vh;
+    display: inline-block;
+}
+
+
+#fovSlider, #carSelector {
+    margin: 0px, 1rem;
+}
+
+
+#blur0 {
+transition-delay: 0ms;
+}
+#blur1 {
+transition-delay: 3ms;
+}
+#blur2 {
+transition-delay: 6ms;
+}
+#blur3 {
+transition-delay: 9ms;
+}
+#blur4 {
+transition-delay: 12ms;
+}
+#blur5 {
+transition-delay: 15ms;
+}
+#blur6 {
+transition-delay: 18ms;
+}
+#blur7 {
+transition-delay: 21ms;
+}
+#blur8 {
+transition-delay: 24ms;
+}
+#blur9 {
+transition-delay: 27ms;
+}
+#blur10 {
+transition-delay: 30ms;
+}
+#blur11 {
+transition-delay: 33ms;
+}
+#blur12 {
+transition-delay: 36ms;
+}
+#blur13 {
+transition-delay: 39ms;
+}
+#blur14 {
+transition-delay: 42ms;
+}
+#blur15 {
+transition-delay: 45ms;
+}
+#blur16 {
+transition-delay: 48ms;
+}
+#blur17 {
+transition-delay: 51ms;
+}
+#blur18 {
+transition-delay: 54ms;
+}
+#blur19 {
+transition-delay: 57ms;
+}
+#blur20 {
+transition-delay: 60ms;
+}
+#blur21 {
+transition-delay: 63ms;
+}
+#blur22 {
+transition-delay: 66ms;
+}
+#blur23 {
+transition-delay: 69ms;
+}
+#blur24 {
+transition-delay: 72ms;
+}
+#blur25 {
+transition-delay: 75ms;
+}
+#blur26 {
+transition-delay: 78ms;
+}
+#blur27 {
+transition-delay: 81ms;
+}
+#blur28 {
+transition-delay: 84ms;
+}
+#blur29 {
+transition-delay: 87ms;
+}
+#blur30 {
+transition-delay: 90ms;
+}
+#blur31 {
+transition-delay: 93ms;
+}

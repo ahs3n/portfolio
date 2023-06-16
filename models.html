@@ -1,0 +1,114 @@
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ahsen's Portfolio : Modelling</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/logo.png">
+
+    <link rel="stylesheet" href="/universal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <!-- Pico CSS imported -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script> -->
+    <!--  Three.js imported  -->
+
+</head>
+<body>
+    <div id="cursor" class="cursor"></div>
+    <script src="cursor.js"></script>
+
+    <div class="container">
+        <h3  style="margin-bottom: 1rem">Ahsen's Portfolio</h3>
+        <nav class="grid">
+            <a href="index.html">Home</a>
+            <a href="models.html">Modelling</a>
+            <a href="webdev.html">Web Dev</a>
+            <a href="art.html">Artwork</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <br>
+        <h1 style="margin-bottom: 0px">Modelling</h1>
+        <hr>
+        <p>On this page, you will find some models I created myself with no external models, textures, or materials. Materials are either procedurally generated in Blender or using textures that I created myself. Here is a small sample of projects I have worked on. Move the slider to view the models. </p>
+        <hr>
+        <input id="carSelector" type="range" step="1" value="0" min="0" max="4" />
+    </div>
+
+    <div id="top"></div>
+    <script type="module" src="models.js"></script>
+    <div id="stuff"></div>
+    <div id="bottom"></div>
+
+    <div class="container">
+        <label for="fovSlider" style="display: inline-block; margin: 0px    2rem">Zoom:</label>
+        <input id="fovSlider" type="range" step="0.01" value="38" min="5" max="90" style="direction: rtl; display: inline-block; width: 80%;"/>
+        <hr>
+        <!-- <p>Anything on this page, I created myself from scratch, with no external models, textures, or materials. Materials are either procedurally generated in Blender or using textures that I created myself.</p> -->
+        <div class="container">
+            <div style="display: inline-block; width: 20%;">
+                <h3>The Hound</h3>
+                <p>This was my first proper experiment using armatures for character posing.  This robot was designed after The Hound from the novel <em>Fahrenheit 541</em>.  The properties and details of the creature are from the novel.</p>
+            </div>
+            <img style="width: 70%; display: inline-block;" class="artBlock" src="assets/images/hound.jpg">
+            <hr>
+            <br>
+        </div>
+
+        <div class="container">
+            <h3>Mustang Wallpaper</h3>
+            <p>I was inspired to make this wallpaper, soon after I completed my work on the model in the showcase above.</p>
+            <img class="artBlock" src="assets/images/mustang.jpg">
+            <hr>
+            <br>
+        </div>
+
+        <div class="container">
+            <h3>404 Page</h3>
+            <p>404: World not found. This is a render I made for my <a href="https://ahs3n.ml">prototype website</a>. The boat in the image is a bit of an easter egg, suggesting the addition of boats in the future.</p>
+            <img class="artBlock" src="assets/images/404.jpg" style="aspect-ratio: 16/7; object-fit: cover;">
+            <hr>
+            <br>
+        </div>
+
+        
+
+
+
+
+
+
+
+
+
+        <blockquote>The AI does not hate you, nor does it love you, but you are made out of atoms which it can use for something else.<br><br>- Instrumental Convergence Hypothesis</blockquote>
+    </div>
+
+    <!-- Footer -->
+    <hr>
+    <div class="footerContainer">
+        <div class="container">
+            <div class="footer" >
+                <h6>Ahsen Khan</h6>
+                <a href="index.html">
+                    <p>Home</p>
+                </a>
+                <a href="models.html">
+                    <p>Models</p>
+                </a>
+                <a href="webdev.html">
+                    <p>Web Dev</p>
+                </a>
+                <a href="art.html">
+                    <p>Artwork</p>
+                </a>
+                <a href="contact.html">
+                    <p>Contact Me</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

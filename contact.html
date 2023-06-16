@@ -1,0 +1,103 @@
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ahsen's Portfolio : Contact</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/logo.png">
+
+    <link rel="stylesheet" href="/universal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <!-- Pico CSS imported -->
+</head>
+<body>
+    <div id="cursor" class="cursor"></div>
+    <script src="cursor.js"></script>
+    <div class="container">
+        <h3  style="margin-bottom: 1rem">Ahsen's Portfolio</h3>
+        <nav class="grid">
+            <a href="index.html">Home</a>
+            <a href="models.html">Modelling</a>
+            <a href="webdev.html">Web Dev</a>
+            <a href="art.html">Artwork</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <br>
+        <h1 style="margin-bottom: 0px">Contact Me</h1>
+        <!-- <h6>Some ways you can get in contact with me.</h6> -->
+        <hr>
+    </div>
+
+    <div class="container">
+        <div class="contactContainer">
+            <a href="https://github.com/01000001-01101011" class="contactBlock">
+                <img src="assets/icons/github.png">
+                <h6>Github</h6>
+            </a>
+            <a href="https://discordapp.com/users/835179046215221248" class="contactBlock">
+                <img src="assets/icons/discord.png">
+                <h6>Discord</h6>
+            </a>
+            <a href="https://www.linkedin.com/in/ahsen35813/" class="contactBlock">
+                <img src="assets/icons/linkedin.png">
+                <h6>Linkedin</h6>
+            </a>
+            <a href="mailto:tlakhan541@virtuallearning.ca" class="contactBlock">
+                <img src="assets/icons/email.png">
+                <h6>Email</h6>
+            </a>
+        </div>
+
+        <h3>...Or use the following form</h3>
+        <form action="sent.html" method="post">
+            <label for="fname" >First name: </label>
+            <input type="text" name="fname" id="fname" pattern="[A-Za-z]{3,100}" placeholder="Human" required />
+
+            <label for="lname" >Last name</label>
+            <input type="text" name="lname" id="lname" pattern="[A-Za-z]{3,100}" placeholder="Earthling" />
+
+            <label for="phone">Telephone (optional):</label>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="012-345-6789"/>
+
+            <br>
+            <br>
+            <br>
+            <input type="text" name="subject" id="subject" placeholder="Message Subject" required/>
+
+            <textarea placeholder="Type your message here..." required></textarea>
+            <input type="submit" value="Send message!"/>
+        </form>
+
+
+        <blockquote>"First Contact with aliens is a delicate process. You want to present humanity as a gentle, kind and enlightened people. You can always tell them the truth later."<br><br>- M. E. Castle in <em>The Clone Chronicles<em> Series
+        </blockquote>
+
+
+
+    </div>
+
+    <!-- Footer -->
+    <hr>
+    <div class="footerContainer">
+        <div class="container">
+            <div class="footer" >
+                <h6>Ahsen Khan</h6>
+                <a href="index.html">
+                    <p>Home</p>
+                </a>
+                <a href="models.html">
+                    <p>Models</p>
+                </a>
+                <a href="webdev.html">
+                    <p>Web Dev</p>
+                </a>
+                <a href="art.html">
+                    <p>Artwork</p>
+                </a>
+                <a href="contact.html">
+                    <p>Contact Me</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
