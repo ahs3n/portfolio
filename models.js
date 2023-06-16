@@ -40,7 +40,7 @@ document.body.appendChild( renderer.domElement );
 
 // LIGHT ////////////////
 
-new RGBELoader().load( '/assets/skybox.hdr', function ( texture ) {
+new RGBELoader().load( './assets/skybox.hdr', function ( texture ) {
 
     texture.mapping = THREE.EquirectangularReflectionMapping;
 
@@ -85,7 +85,7 @@ scene.add(plane);
 
 
 let cars = [];
-loader.load( '/assets/camaro.glb', function ( gltf ) {
+loader.load( './assets/camaro.glb', function ( gltf ) {
     let i = 0;
     cars[i] = gltf.scene;
 	scene.add( cars[i] );
@@ -100,7 +100,7 @@ loader.load( '/assets/camaro.glb', function ( gltf ) {
 },undefined,function(error){console.error(error);});
 
 
-loader.load( '/assets/jesko.glb', function ( gltf ) {
+loader.load( './assets/jesko.glb', function ( gltf ) {
     let i = 1;
     cars[i] = gltf.scene;
 	scene.add( cars[i] );
@@ -114,7 +114,7 @@ loader.load( '/assets/jesko.glb', function ( gltf ) {
 
 },undefined,function(error){console.error(error);});
 
-loader.load( '/assets/mustang.glb', function ( gltf ) {
+loader.load( './assets/mustang.glb', function ( gltf ) {
     let i = 2;
     cars[i] = gltf.scene;
 	scene.add( cars[i] );
@@ -129,7 +129,7 @@ loader.load( '/assets/mustang.glb', function ( gltf ) {
 },undefined,function(error){console.error(error);});
 
 
-loader.load( '/assets/hound.glb', function ( gltf ) {
+loader.load( './assets/hound.glb', function ( gltf ) {
     let i = 3;
     cars[i] = gltf.scene;
 	scene.add( cars[i] );
@@ -142,7 +142,7 @@ loader.load( '/assets/hound.glb', function ( gltf ) {
 
 },undefined,function(error){console.error(error);});
 
-loader.load( '/assets/superboat.glb', function ( gltf ) {
+loader.load( './assets/superboat.glb', function ( gltf ) {
     let i = 4;
     cars[i] = gltf.scene;
 	scene.add( cars[i] );
