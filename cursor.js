@@ -23,7 +23,7 @@ window.onload = (e) => {
         element.addEventListener("mouseleave", (e) => { dotSize(baseSize) });
     }    
     for (const element of document.querySelectorAll(".artBlock")) {
-        element.addEventListener("mouseenter", (e) => { dotSize(baseSize*3) });
+        element.addEventListener("mouseenter", (e) => { dotSize(baseSize*2) });
         element.addEventListener("mouseleave", (e) => { dotSize(baseSize) });
     }    
     dotSize(baseSize);
@@ -113,4 +113,9 @@ function dotSize(s) {
 
     cursor.style.background = `rgba(255,255,255,${0.5/(s*s)})`;
     cursor.style.backdropFilter = `blur(${0.3/(Math.sqrt(s))}rem)`;
+}
+
+
+function opW(url){
+    window.open(url);
 }
