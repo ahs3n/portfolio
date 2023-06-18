@@ -58,8 +58,8 @@ const cursorPos = (e)=> {
 }
 window.addEventListener('mousemove', cursorPos)
 
-window.addEventListener("mouseenter", (e) => { dotSize(baseSize) });
-window.addEventListener("mouseleave", (e) => { dotSize(baseSize*5) });
+document.body.addEventListener("mouseenter", (e) => { dotSize(baseSize) });
+document.body.addEventListener("mouseleave", (e) => { dotSize(baseSize*5) });
 
 
 
