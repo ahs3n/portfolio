@@ -58,6 +58,10 @@ const cursorPos = (e)=> {
 }
 window.addEventListener('mousemove', cursorPos)
 
+window.addEventListener("mouseenter", (e) => { dotSize(baseSize) });
+window.addEventListener("mouseout", (e) => { dotSize(baseSize*5) });
+
+
 
 let u;
 function update() {
