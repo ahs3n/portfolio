@@ -58,7 +58,7 @@ function cursorPos(){
 }
 window.addEventListener('mousemove', () => { cursorPos() });
 
-document.body.addEventListener("mouseenter", (e) => { dotSize(baseSize); cursorPos(e) });
+document.body.addEventListener("mouseenter", () => { dotSize(baseSize); cursorPos() });
 document.body.addEventListener("mouseleave", (e) => { dotSize(baseSize*8) });
 
 
