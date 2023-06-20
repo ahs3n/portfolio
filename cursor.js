@@ -49,16 +49,16 @@ let sX = 0;
 let sY = 0;
 let mouseSmooth = 0.3;
 // let lN = false;
-function cursorPos(){
+function cursorPos(e){
     lX = sX;
     lY = sY;
     mouseY = e.clientY;
     mouseX = e.clientX;
     lN = true;
 }
-window.addEventListener('mousemove', () => { cursorPos() });
+window.addEventListener('mousemove', (e) => { cursorPos(e) });
 
-document.body.addEventListener("mouseenter", () => { dotSize(baseSize); cursorPos() });
+document.body.addEventListener("mouseenter", (e) => { dotSize(baseSize); cursorPos(e) });
 document.body.addEventListener("mouseleave", (e) => { dotSize(baseSize*8) });
 
 
