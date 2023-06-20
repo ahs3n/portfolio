@@ -3,7 +3,7 @@
 }
 
 body {
-    overflow: clip;
+    overflow-x: clip;
 }
 
 .cursor {
