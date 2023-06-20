@@ -2,6 +2,10 @@
     cursor: none;
 }
 
+body {
+    overflow: clip;
+}
+
 .cursor {
     z-index: 100;
     width: 5px;
