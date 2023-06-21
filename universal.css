@@ -2,13 +2,6 @@
     cursor: none;
 }
 
-body {
-    overflow-x: clip;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
 .cursor {
     z-index: 100;
     width: 5px;
@@ -258,7 +251,6 @@ rgba(17, 25, 31, 1) 100%),
  url(./assets/images/blackbg.jpg);
     background-size: cover;
     background-position: center;
-    margin-top: auto;
 }
 
 .footer {
