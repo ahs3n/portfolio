@@ -4,7 +4,8 @@
 
 body {
     overflow-x: clip;
-    
+    display: flex;
+    flex-flow: column;
 }
 
 .cursor {
