@@ -2,6 +2,10 @@
     cursor: none;
 }
 
+body {
+    overflow-x: clip;
+}
+
 .cursor {
     z-index: 100;
     width: 5px;
@@ -14,7 +18,7 @@
     top: 0px;
     -webkit-backdrop-filter: blur(.3rem);
     backdrop-filter: blur(.3rem);
-    overflow: clip;
+    overflow: hidden;
 
     transition: width 500ms, height 500ms, background 500ms/*, transform 20ms*/;
 }
