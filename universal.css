@@ -227,6 +227,10 @@ a {
     transition: transform 400ms, filter 400ms;
 }
 
+hr:last-of-type {
+    margin-top: 5rem;
+}
+
 .footerContainer {
     height: 30vh; 
     background: linear-gradient(to left, rgba(17, 25, 31, 0) 0%, 
