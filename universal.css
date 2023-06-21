@@ -6,9 +6,6 @@ body {
     overflow-x: clip;
     
 }
-body div:last-of-type {
-    margin-top: auto;
-}
 
 .cursor {
     z-index: 100;
@@ -254,6 +251,7 @@ rgba(17, 25, 31, 1) 100%),
  url(./assets/images/blackbg.jpg);
     background-size: cover;
     background-position: center;
+    margin-top: auto;
 }
 
 .footer {
