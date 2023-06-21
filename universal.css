@@ -4,6 +4,10 @@
 
 body {
     overflow-x: clip;
+    
+}
+body div:last-of-type {
+    margin-top: auto;
 }
 
 .cursor {
