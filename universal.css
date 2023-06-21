@@ -21,6 +21,7 @@ body {
     top: 0px;
     -webkit-backdrop-filter: blur(.3rem);
     backdrop-filter: blur(.3rem);
+    overflow: clip;
 
     transition: width 500ms, height 500ms, background 500ms/*, transform 20ms*/;
 }
