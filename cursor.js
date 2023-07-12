@@ -21,7 +21,7 @@ window.onload = (e) => {
     let script = document.scripts[document.scripts.length - 1];//this script
     div.id = "nav";
     script.parentElement.insertBefore(div, script);//add to page
-    await $("#nav").load("./nav.html");
+    const result = await $("#nav").load("./nav.html");
     //Nav bar thing
 
 
