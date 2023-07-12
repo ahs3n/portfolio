@@ -4,7 +4,6 @@ function remToPx(rem) {
 
 
 
-let cursor = document.getElementById("cursor");
 let cursorRadius = 1;
 let cursorRadiusTarget = 1;
 let baseSize = 2;
@@ -25,6 +24,7 @@ window.onload = (e) => {
     div.id = "cursor";
     div.class = "cursor";
     script.parentElement.insertBefore(div, script); // Add the newly-created div to the page
+    let cursor = div;//document.getElementById("cursor");
 
 
     for (const element of document.querySelectorAll("a, input, .imageBlock, textarea")) {
