@@ -18,6 +18,15 @@ let hoverSize = 0.5;
 
 window.onload = (e) => {
 
+    var div = document.createElement('div'), // Create a new div
+    script = document.scripts[document.scripts.length - 1]; // A reference to the currently running script
+
+    //div.innerHTML = 'Hello'; // Add some content to the newly-created div
+    div.id = "cursor";
+    div.class = "cursor";
+    script.parentElement.insertBefore(div, script); // Add the newly-created div to the page
+
+
     for (const element of document.querySelectorAll("a, input, .imageBlock, textarea")) {
         element.addEventListener("mouseenter", (e) => { dotSize(hoverSize) });
         element.addEventListener("mouseleave", (e) => { dotSize(baseSize) });
