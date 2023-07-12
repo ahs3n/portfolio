@@ -3,7 +3,8 @@ function remToPx(rem) {
 }
 
 
-let cursor = document.getElementById("cursor");;
+
+let cursor = document.getElementById("cursor");
 let cursorRadius = 1;
 let cursorRadiusTarget = 1;
 let baseSize = 2;
