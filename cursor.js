@@ -3,7 +3,7 @@ function remToPx(rem) {
 }
 
 
-let cursor;
+let cursor = document.getElementById("cursor");;
 let cursorRadius = 1;
 let cursorRadiusTarget = 1;
 let baseSize = 2;
@@ -16,16 +16,6 @@ let hoverSize = 0.5;
 
 
 window.onload = (e) => {
-
-    var div = document.createElement('div'), // Create a new div
-    script = document.scripts[document.scripts.length - 1]; // A reference to the currently running script
-
-    //div.innerHTML = 'Hello'; // Add some content to the newly-created div
-    div.id = "cursor";
-    div.class = "cursor";
-    script.parentElement.insertBefore(div, script); // Add the newly-created div to the page
-    cursor = div;//document.getElementById("cursor");
-
 
     for (const element of document.querySelectorAll("a, input, .imageBlock, textarea")) {
         element.addEventListener("mouseenter", (e) => { dotSize(hoverSize) });
