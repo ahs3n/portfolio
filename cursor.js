@@ -17,6 +17,12 @@ let hoverSize = 0.5;
 
 
 window.onload = (e) => {
+    let div = document.createElement('div');
+    let script = document.scripts[document.scripts.length - 1];//this script
+    div.id = "nav";
+    script.parentElement.insertBefore(div, script);//add to page
+    $("#nav").load("./nav.html");
+    //Nav bar thing
 
     for (const element of document.querySelectorAll("a, input, .imageBlock, textarea")) {
         element.addEventListener("mouseenter", (e) => { dotSize(hoverSize) });
