@@ -14,22 +14,28 @@ let hoverSize = 0.5;
 //motion blur iterations
 // let mbI = 32;
 // let blur = [];
-async function a(){
-    await $("#foot").load("./footer.html");
-    await $("#nav").load("./nav.html");
-    for (const element of document.querySelectorAll("a, input, .imageBlock, textarea")) {
+function a(){
+    for (const element of document.querySelectorAll("a")) {
+        element.addEventListener("mouseenter", (e) => { dotSize(hoverSize) });
+        element.addEventListener("mouseleave", (e) => { dotSize(baseSize) });
+    }    
+}
+
+window.onload = (e) => {
+    for (const element of document.querySelectorAll("input, .imageBlock, textarea")) {
         element.addEventListener("mouseenter", (e) => { dotSize(hoverSize) });
         element.addEventListener("mouseleave", (e) => { dotSize(baseSize) });
     }    
     for (const element of document.querySelectorAll(".artBlock")) {
         element.addEventListener("mouseenter", (e) => { dotSize(baseSize*2) });
         element.addEventListener("mouseleave", (e) => { dotSize(baseSize) });
-    }    
+    }  
     dotSize(baseSize);
-}
+  
 
-window.onload = (e) => {
-    a();
+    $("#foot").load("./footer.html", ()=>{a()});
+    $("#nav").load("./nav.html", ()=>{a()});
+
     //Nav bar thing
     
 
