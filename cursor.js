@@ -14,11 +14,13 @@ let hoverSize = 0.5;
 //motion blur iterations
 // let mbI = 32;
 // let blur = [];
-
+function a(){
+    $("#foot").load("./footer.html");
+    $("#nav").load("./nav.html");
+}
 
 window.onload = (e) => {
-    $("#foot").load("./footer.html");
-    $("#nav").load("./nav.html", ()=>{
+    a(()=>{
         
         for (const element of document.querySelectorAll("a, input, .imageBlock, textarea")) {
             element.addEventListener("mouseenter", (e) => { dotSize(hoverSize) });
