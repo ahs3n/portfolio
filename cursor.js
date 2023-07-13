@@ -14,9 +14,9 @@ let hoverSize = 0.5;
 //motion blur iterations
 // let mbI = 32;
 // let blur = [];
-function a(){
-    $("#foot").load("./footer.html");
-    $("#nav").load("./nav.html");
+async function a(){
+    await $("#foot").load("./footer.html");
+    await $("#nav").load("./nav.html");
 }
 
 window.onload = (e) => {
