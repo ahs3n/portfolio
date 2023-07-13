@@ -17,10 +17,7 @@ let hoverSize = 0.5;
 
 
 window.onload = (e) => {
-    let div = document.createElement('div');
-    let script = document.scripts[document.scripts.length - 1];//this script
-    div.id = "nav";
-    script.parentElement.insertBefore(div, script);//add to page
+    $("#foot").load("./footer.html");
     $("#nav").load("./nav.html", ()=>{
         
         for (const element of document.querySelectorAll("a, input, .imageBlock, textarea")) {
