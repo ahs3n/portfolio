@@ -15,17 +15,16 @@ let hoverSize = 0.5;
 // let mbI = 32;
 // let blur = [];
 
-
-window.onload = (e) => {
+async function a(){
     let div = document.createElement('div');
     let script = document.scripts[document.scripts.length - 1];//this script
     div.id = "nav";
     script.parentElement.insertBefore(div, script);//add to page
-    const result = await $("#nav").load("./nav.html");
+    await $("#nav").load("./nav.html");
     //Nav bar thing
-
-
-
+    
+    
+    
     for (const element of document.querySelectorAll("a, input, .imageBlock, textarea")) {
         element.addEventListener("mouseenter", (e) => { dotSize(hoverSize) });
         element.addEventListener("mouseleave", (e) => { dotSize(baseSize) });
@@ -35,7 +34,10 @@ window.onload = (e) => {
         element.addEventListener("mouseleave", (e) => { dotSize(baseSize) });
     }    
     dotSize(baseSize);
+}
 
+window.onload = (e) => {
+    a();
     // for (let i = 0; i < mbI; i++)
     // {
     //     const clone = cursor.cloneNode();
@@ -43,10 +45,6 @@ window.onload = (e) => {
     //     document.body.appendChild(clone);
     //     blur[i] = document.getElementById(`blur${i}`);
     // }
-
-
-
-
 };
 
 let lX = 0;
