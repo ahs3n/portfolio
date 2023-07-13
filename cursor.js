@@ -15,29 +15,28 @@ let hoverSize = 0.5;
 // let mbI = 32;
 // let blur = [];
 
-async function a(){
+
+window.onload = (e) => {
     let div = document.createElement('div');
     let script = document.scripts[document.scripts.length - 1];//this script
     div.id = "nav";
     script.parentElement.insertBefore(div, script);//add to page
-    await $("#nav").load("./nav.html");
+    $("#nav").load("./nav.html", ()=>{
+        
+        for (const element of document.querySelectorAll("a, input, .imageBlock, textarea")) {
+            element.addEventListener("mouseenter", (e) => { dotSize(hoverSize) });
+            element.addEventListener("mouseleave", (e) => { dotSize(baseSize) });
+        }    
+        for (const element of document.querySelectorAll(".artBlock")) {
+            element.addEventListener("mouseenter", (e) => { dotSize(baseSize*2) });
+            element.addEventListener("mouseleave", (e) => { dotSize(baseSize) });
+        }    
+        dotSize(baseSize);
+
+    });
     //Nav bar thing
     
-    
-    
-    for (const element of document.querySelectorAll("a, input, .imageBlock, textarea")) {
-        element.addEventListener("mouseenter", (e) => { dotSize(hoverSize) });
-        element.addEventListener("mouseleave", (e) => { dotSize(baseSize) });
-    }    
-    for (const element of document.querySelectorAll(".artBlock")) {
-        element.addEventListener("mouseenter", (e) => { dotSize(baseSize*2) });
-        element.addEventListener("mouseleave", (e) => { dotSize(baseSize) });
-    }    
-    dotSize(baseSize);
-}
 
-window.onload = (e) => {
-    a();
     // for (let i = 0; i < mbI; i++)
     // {
     //     const clone = cursor.cloneNode();
