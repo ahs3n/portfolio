@@ -175,8 +175,10 @@ function render() {
     }
 
     let p = Math.round(carSelector.value);
+    console.log(carSelector.value);
     carSelector.value += (p - carSelector.value) * speed;
-
+    console.log(carSelector.value);
+    console.log(0);
     let rspeed = speed;//Math.abs(p * separation - camera.position.x)*speed;
     
 
