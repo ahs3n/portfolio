@@ -179,7 +179,7 @@ a {
 
 .artBlock {
     padding: 1rem;
-    min-height: 30vh;
+    /* min-height: 30vh; */
     width: 100%;
     max-width: 80vw;
     margin: auto;
