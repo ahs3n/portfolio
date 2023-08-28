@@ -211,6 +211,7 @@ addEventListener("resize", (e) => {
     camera.aspect = window.innerWidth/(window.innerHeight*0.5);
     renderer.setSize( window.innerWidth, window.innerHeight * 0.5 );
     camera.updateProjectionMatrix();
+    renderer.render(scene, camera); // In case the scene is frozen due to newframe = false;
     console.log("rezised");
 });
 
