@@ -177,11 +177,12 @@ function render() {
     let p = carSelector.value;
     let rspeed = speed;//Math.abs(p * separation - camera.position.x)*speed;
     
-
+    let newframe = false;
     if (Math.abs(p * separation - camera.position.x) > 0.01){
         camera.position.x = camera.position.x * (1-rspeed) + p * separation * rspeed;
         core.position.x = core.position.x * (1-speed*.8) + p * separation * speed*.8;
         //core should be in a separate if statement logically but the difference is negligible
+        newframe = true;
     }
     
 
@@ -189,12 +190,15 @@ function render() {
     if (Math.abs(camera.fov - actualFOV) > 0.01){
         camera.updateProjectionMatrix();
         actualFOV = camera.fov;
+        newframe = true;
     }
 
     
     requestAnimationFrame( render );
     // Render the scene
-    renderer.render(scene, camera);
+    if (newframe){
+        renderer.render(scene, camera);
+    }
 };
 
 
