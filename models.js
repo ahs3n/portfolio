@@ -16,9 +16,9 @@ const loader = new GLTFLoader();
 
 
 let camera = new THREE.PerspectiveCamera(60, window.innerWidth/(window.innerHeight*0.5), 0.1, 1000 );
-camera.position.z = 5;
+camera.position.z = 10;
+camera.position.y = 5;
 camera.rotation.x = -Math.PI / 8;
-camera.position.y = 2.5;
 
 let renderer = new THREE.WebGLRenderer({antialias:true});
 
